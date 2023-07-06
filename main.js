@@ -1,6 +1,11 @@
-var menu = document.querySelector('nav ul');
-var menuBar = document.querySelector('nav .menu-icon');
-var iconMenu = document.querySelector('nav .menu-icon img');
+const menu = document.querySelector('nav ul');
+const menuBar = document.querySelector('nav .menu-icon');
+const iconMenu = document.querySelector('nav .menu-icon img');
+const saidaMenu = document.getElementById("exitButton");
+
+saidaMenu.addEventListener("click", function() {
+    document.querySelector("nav ul").classList.remove("active");
+  });
 
 menuBar.addEventListener('click',function(){
 
@@ -16,8 +21,8 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     event.preventDefault(); // Impede o envio do formulário
 
     // Obter os valores digitados pelo usuário
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
     // Verificar as credenciais
     if (username === "seu_usuario" && password === "sua_senha") {
